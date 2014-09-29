@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="colorsheme-1">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Pixelmap</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body class="group">        
+        <div class="content">
+            <div class="legend group" id="legend">
+                <h1 id="controlsLink">Controls</h1>
+                <div class="controls-wrap">
+                    <select id="colorsheme" class="colorsheme wrap">
+                        <option value="colorsheme-1">Custom Colorsheme</option>
+                        <option value="colorsheme-2">Colorbrewer 2.0 1</option>
+                        <option value="colorsheme-3">Colorbrewer 2.0 2</option>
+                        <option value="colorsheme-4">Colorbrewer 2.0 3</option>
+                        <option value="colorsheme-5">Colorbrewer 2.0 4</option>
+                        <option value="colorsheme-6">Colorbrewer 2.0 5</option>
+                        <option value="colorsheme-7">Colorbrewer 2.0 6</option>
+                    </select>
+
+                    <div class="sameparam">
+                        <label>Mark same on hover: </label>
+                        <input type="checkbox" id="hostCheck" checked> <label for="hostCheck">Host (sourceCountry)</label>
+                        <input type="checkbox" id="responsecodeCheck" checked> <label for="responsecodeCheck">Response Code</label>
+                        <input type="checkbox" id="urlCheck" checked> <label for="urlCheck">URL</label>
+                    </div>
+
+                    <div class="lineheight">
+                        <label>Lineheight: </label><input type="number" value="4" id="lineheight">
+                    </div>
+
+                    <button id="toggleTimeView" class="toggletimeview">Toggle Time View</button>
+
+                    <form class="regexform group" id="regXForm">
+                        <label>Filter Strings in </label>
+                        <select id="regXcat">
+                            <option value="all">All</option>
+                            <option value="ip">Source Country</option>
+                            <option value="responsecode">Response Code</option>
+                            <option value="url">URL</option>
+                        </select>
+                        <input type="text" id="regX" placeholder="Enter String you want to filter"> <button id="regXButton">Filter!</button>
+                        <button id="regXdelete" class="hidden">Delete Filtered</button>
+                        <button id="regXreset" class="hidden">Reset Filter</button>
+                        <button id="regXpotIt">Bin it!</button>
+                    </form>
+                    <div class="deletepotitlist">
+                        <span id="potitlist" class="group"></span>
+                        <span id="deletelist" class="group"></span>
+                    </div>
+                </div>
+            </div>
+
+            <h1 id="legendLink">Key</h1>
+            <div class="controls-wrap">
+                <ul class="pixel-legend" id="pixelLegend">
+                    <li class="group">
+                        <div class="pixel" id="countryPixel"></div>
+                        <div class="label">Source Country</div>
+                        <div class="gradient-wrap country group">
+                            <div class="min"></div>
+                            <div class="bar"></div>
+                            <div class="max"></div>
+                        </div>
+                    </li>
+
+                    <li class="group">
+                        <div class="pixel" id="responsecodePixel"></div>
+                        <div class="label">Response Code</div>
+                        <div class="gradient-wrap responsecode group">
+                            <div class="min"></div>
+                            <div class="bar"></div>
+                            <div class="max"></div>
+                        </div>
+                    </li>
+
+                    <li class="group">
+                        <div class="pixel" id="urlPixel"></div>
+                        <div class="label">URL</div>
+                        <div class="gradient-wrap url group">
+                            <div class="min"></div>
+                            <div class="bar"></div>
+                            <div class="max"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="wrapper" class="wrapper group"></div>
+            
+            <div class="log-text">
+                <div id="logText"></div>                 
+            </div>
+            
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-2.1.0.min.js"><\/script>')</script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

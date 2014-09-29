@@ -1,0 +1,580 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+* {
+  -webkit-box-sizing: border-box; /* Android ≤ 2.3, iOS ≤ 4 */
+     -moz-box-sizing: border-box; /* Firefox 1+ */
+          box-sizing: border-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
+}
+html {
+    background: #141414;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    padding: 10px;
+}
+    .content {
+        max-width: 70em;
+        margin: 0 auto;
+    }
+    .wrapper {
+        -webkit-transition: opacity .5s, -webkit-transform 1s;
+        -webkit-transform-origin: 50% 50%;
+        opacity: 0;
+        margin-top: 20px;
+    }
+    .wrapper.active {
+        opacity: 1;
+    }
+        .logline {
+            float: left;
+            cursor: pointer;
+            width: 5px;
+            margin-bottom: 4px; 
+            margin-right: 0;
+            height: 12px;
+        }
+            .logline > div {
+                width: 4px;
+                height: 4px;
+                float: left;
+            }
+
+            /* Farbschema default */
+            .colorsheme-1 .color-0 { background: #ff0048; }
+            .colorsheme-1 .color-1 { background: #e70651; }
+            .colorsheme-1 .color-2 { background: #c50f5e; }
+            .colorsheme-1 .color-3 { background: #9d1a6e; }
+            .colorsheme-1 .color-4 { background: #71267e; }
+            .colorsheme-1 .color-5 { background: #47318f; }
+            .colorsheme-1 .color-6 { background: #233b9d; }
+            .colorsheme-1 .color-7 { background: #0742a7; }
+            .colorsheme-1 .color-8 { background: #0044aa; }
+            .colorsheme-1 .color-9 { background: #002a68; }
+
+            /* Farbschema blue to red */
+            .colorsheme-2 .color-0 { background: #b2182b; }
+            .colorsheme-2 .color-1 { background: #d6604d; }
+            .colorsheme-2 .color-2 { background: #f4a582; }
+            .colorsheme-2 .color-3 { background: #fddbc7; }
+            .colorsheme-2 .color-4 { background: #f7f7f7; }
+            .colorsheme-2 .color-5 { background: #d1e5f0; }
+            .colorsheme-2 .color-6 { background: #92c5de; }
+            .colorsheme-2 .color-7 { background: #4393c3; }
+            .colorsheme-2 .color-8 { background: #2166ac; }
+            .colorsheme-2 .color-9 { background: #103c68; }
+
+            /* Farbschema green to red */
+            .colorsheme-3 .color-0 { background: #d73027; }
+            .colorsheme-3 .color-1 { background: #f46d43; }
+            .colorsheme-3 .color-2 { background: #fdae61; }
+            .colorsheme-3 .color-3 { background: #fee08b; }
+            .colorsheme-3 .color-4 { background: #ffffbf; }
+            .colorsheme-3 .color-5 { background: #d9ef8b; }
+            .colorsheme-3 .color-6 { background: #a6d96a; }
+            .colorsheme-3 .color-7 { background: #66bd63; }
+            .colorsheme-3 .color-8 { background: #1a9850; }
+            .colorsheme-3 .color-9 { background: #0d4626; }  
+
+            /* Farbschema blue to green to red */
+            .colorsheme-4 .color-0 { background: #d53e4f; }
+            .colorsheme-4 .color-1 { background: #f46d43; }
+            .colorsheme-4 .color-2 { background: #fdae61; }
+            .colorsheme-4 .color-3 { background: #fee08b; }
+            .colorsheme-4 .color-4 { background: #ffffbf; }
+            .colorsheme-4 .color-5 { background: #e6f598; }
+            .colorsheme-4 .color-6 { background: #abdda4; }
+            .colorsheme-4 .color-7 { background: #66c2a5; }
+            .colorsheme-4 .color-8 { background: #3288bd; }
+            .colorsheme-4 .color-9 { background: #3532bd; }  
+
+            /* Farbschema green to pink */
+            .colorsheme-5 .color-0 { background: #c51b7d; }
+            .colorsheme-5 .color-1 { background: #de77ae; }
+            .colorsheme-5 .color-2 { background: #f1b6da; }
+            .colorsheme-5 .color-3 { background: #fde0ef; }
+            .colorsheme-5 .color-4 { background: #f7f7f7; }
+            .colorsheme-5 .color-5 { background: #e6f5d0; }
+            .colorsheme-5 .color-6 { background: #b8e186; }
+            .colorsheme-5 .color-7 { background: #7fbc41; }
+            .colorsheme-5 .color-8 { background: #4d9221; }
+            .colorsheme-5 .color-9 { background: #2e4f19; } 
+
+            /* Farbschema turkis to brown */
+            .colorsheme-6 .color-0 { background: #8c510a; }
+            .colorsheme-6 .color-1 { background: #bf812d; }
+            .colorsheme-6 .color-2 { background: #dfc27d; }
+            .colorsheme-6 .color-3 { background: #f6e8c3; }
+            .colorsheme-6 .color-4 { background: #f5f5f5; }
+            .colorsheme-6 .color-5 { background: #c7eae5; }
+            .colorsheme-6 .color-6 { background: #80cdc1; }
+            .colorsheme-6 .color-7 { background: #35978f; }
+            .colorsheme-6 .color-8 { background: #01665e; }
+            .colorsheme-6 .color-9 { background: #003c30; }  
+
+            /* Farbschema turkis to brown */
+            .colorsheme-7 .color-0 { background: #fb8072; }
+            .colorsheme-7 .color-1 { background: #fdb462; }
+            .colorsheme-7 .color-2 { background: #ffffb3; }
+            .colorsheme-7 .color-3 { background: #bebada; }
+            .colorsheme-7 .color-4 { background: #fccde5; }
+            .colorsheme-7 .color-5 { background: #bc80bd; }
+            .colorsheme-7 .color-6 { background: #d9d9d9; }
+            .colorsheme-7 .color-7 { background: #b3de69; }
+            .colorsheme-7 .color-8 { background: #8dd3c7; }
+            .colorsheme-7 .color-9 { background: #80b1d3; }        
+
+        .wrapper .logline.same {
+            position: relative;
+            z-index: 9999;
+            outline: 1px solid #00ff00;
+        }
+        .wrapper .logline.regX {
+            opacity: .1;
+        }
+            .wrapper .logline > .same {
+                background:#000;
+                opacity: 1 !important;
+            }
+            /*
+            .wrapper .logline > .potted {
+                border-left: 2px solid #ffd200;
+            }
+            */
+        .wrapper div.active {
+            position: relative;
+            z-index: 10000;
+            outline: 2px solid #ff0000;
+        }
+         
+select,
+button {
+    float: left;
+    margin: 0 10px 10px 0;
+    border-radius: 4px;
+    padding: 5px 24px 7px 6px;
+    -webkit-appearance: none;
+    background: #fafafa url(../img/select-arrow.svg) no-repeat right center;
+    border: none;
+    font-size: 16px;
+}
+
+.sameparam {
+    float: left;
+    color: #fafafa;
+    margin: 0 10px 10px 0;
+    padding: 5px 10px 6px;
+    background: #3f3f3f;
+    border-radius: 4px;
+    font-size: 16px;
+}
+    .sameparam input[type="checkbox"] {
+        margin: 0 0 0 .5em;
+    }
+
+.lineheight {
+    float: left;
+    color: #fafafa;
+    margin: 0 10px 10px 0;
+    padding: 5px 5px 5px 10px;
+    background: #3f3f3f;
+    border-radius: 4px;
+}
+    .lineheight label {
+        margin-right: 10px;
+    }
+    .lineheight input[type="number"] {
+        border-radius: 2px;
+        background: #fafafa;
+        padding: 2px 10px;
+        width: 3em;
+        border: none;
+    }
+
+.toggletimeview {
+    background: #fafafa;
+    padding: 6px 10px 7px;
+}
+
+
+.regexform {
+    width: 100%;
+    clear: both;
+    margin: 0 0 20px;
+    color: #fafafa;
+    padding: 5px 10px 6px;
+    background: #3f3f3f;
+    border-radius: 4px;
+    font-size: 16px;
+}
+    .regexform label {
+        float: left;
+        margin: 5px 10px 0 0;
+    }
+    .regexform select {
+        max-width: 70px;
+        margin-bottom: 0;
+    }
+    .regexform input[type="text"] {
+        border-radius: 4px;
+        background: #fafafa;
+        padding: 1px 10px 3px;
+        margin-right: 10px;
+        width: 300px;
+        height: 33px;
+        float: left;
+        border: none;
+    }
+    .regexform button {
+        background: #fafafa;
+        padding: 6px 10px 7px;
+        margin-bottom: 0;
+    }
+
+.deletepotitlist {
+    padding-bottom: .75em;
+}
+    .deletepotitlist > span {
+        display: block;
+        color: #888;
+    }
+        .deletepotitlist > span > span {
+            background: #3f3f3f;
+            padding: 2px 8px;
+            float: left;
+            display: block;
+            border-radius: 3px;
+            margin: 0 5px 5px 0;
+
+        }
+        .deletepotitlist > span > span.title {
+            background: transparent;
+            padding: 0;
+            padding: 2px 0;
+        }
+
+
+.log-text {
+    display: block;
+    min-height: 2em;
+    background: #000;
+    color: #333;
+    padding: .5em 1em;
+    margin: 1em 0;
+    min-height: 13.5em;
+}
+    .log-text span {
+        color: #f0f0f0;
+    }
+    .label {
+        color: #999;
+    }
+
+.timeseperator {
+    max-width: 15px;
+    min-height: 14px;
+    font-size: 12px;
+    padding: 1px 2px 0 0;
+    height: 12px;
+    margin: -2px 0 4px; 
+    float: left;
+    color: #fafafa;
+    text-align: center;
+}
+
+.timealternative .timeseperator {
+    clear: both;
+    max-width: 100%;
+    border-top: 1px dotted #333;
+    margin-left: -2em;
+    float: none;
+    text-align: left;
+}
+.timealternative .timeseperator.first {
+    border-top: 1px dotted #141414;
+}
+    .timealternative .timeseperator .label {
+        margin-top: 1.2em;
+    }
+
+
+.pixel-legend {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    .pixel-legend li {
+        clear: both;
+        width: 100%;
+    }
+        .pixel-legend .pixel {
+            width: 23px;
+            height: 23px;
+            float: left;
+            margin-right: 10px;
+            border: 1px solid #666;
+            position: relative;
+        }
+        .pixel-legend .pixel:nth-child(1) {
+            margin: -1px 10px -1px 0;
+        } 
+        .pixel-legend .label {
+            float: left;
+            min-width: 120px;
+        }
+        .pixel-legend .gradient-wrap {
+            float: left;
+            display: flex;
+            color: #999;
+        }
+            .pixel-legend .bar {
+                width: 150px;
+                height: 18px;
+                margin-top: 2px;
+                background: #ff0048;
+                background: -moz-linear-gradient(left, #ff0048 0%, #002a68 100%);
+                background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff0048), color-stop(100%,#002a68));
+                background: -webkit-linear-gradient(left, #ff0048 0%,#002a68 100%);
+                background: -o-linear-gradient(left, #ff0048 0%,#002a68 100%);
+                background: -ms-linear-gradient(left, #ff0048 0%,#002a68 100%);
+                background: linear-gradient(to right, #ff0048 0%,#002a68 100%);
+            }
+            .pixel-legend .min,
+            .pixel-legend .max {
+                text-align: right;
+                min-width: 30px;
+                margin: 0 10px;
+            }
+            .pixel-legend .max {
+                text-align: left;
+            }
+
+
+
+h1 {
+    color: #999;
+    font-size: 1em;
+    padding: 0;
+    cursor: pointer;
+    margin: .5em 0;
+}
+h1.active {
+    margin: .5em 0 1.25em;
+}
+
+    h1::before {
+        content: '›';
+        display: block;
+        float: left;
+        margin: -8px 5px 0 0;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    h1.active::before {
+        -webkit-transform-origin: 50% 50%; 
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        margin: -5px 5px 0 0;
+    }
+    .controls-wrap {
+        height: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: .5s;
+    }
+        .controls-wrap.active {
+            height: auto;
+            max-height: 300px;
+            padding: 1px 0;
+        }
+            
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.group:before,
+.group:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.group:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
